@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+
+#define nn '\n'
+#define ll long long
+
+using namespace std;
+
+void solve(){
+  ll n;
+  cin >> n;
+  ll cnt = 0;
+  while(n){
+    if(n%10==7||n%10==4){ 
+      cnt++;
+    }
+    n/=10;
+  }
+  if(cnt == 7 || cnt == 4)
+    cout << "YES" << nn;
+  else
+    cout << "NO" << nn;
+}
+int main(){   
+      solve();
+}
