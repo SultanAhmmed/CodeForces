@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+
+#define ll long long
+//#define vi vector<int>
+using namespace std;
+
+void solve() {
+
+	int length;
+	cin >> length;
+
+	vector<int>ara(length);
+
+	int sum = 0;
+	for (auto &i : ara) {
+		cin >> i;
+		sum += i;
+	}
+
+	int cnt = 0;
+	if (sum % length == 0) {
+
+		int ans = sum / length;
+
+		for (int i = 0; i < length; ++i) {
+
+			if (ans < ara[i]) {
+				cnt++;
+			}
+		}
+		cout << cnt << '\n';
+	}
+	else {
+		cout << "-1" << '\n';
+	}
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0); cout.tie(0);
+
+	int tests;
+	cin >> tests;
+	while (tests--) {
+		solve();
+	}
+}
